@@ -1,3 +1,17 @@
-.navigation {
-    min-height: 100vh;
+.wrapper {
+  min-height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.sidebar {
+  min-width: 7%;
+  max-width: 7%;
+}
+
+.content {
+  min-width: 93%;
+  max-width: 93%;
 }
