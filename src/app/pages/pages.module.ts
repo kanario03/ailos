@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesPageRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SearchComponent } from './search/search.component';
+import { TimeLineComponent } from '../shared/time-line/time-line.component';
 
 
 @NgModule({
   declarations: [
     PagesComponent,
-    SearchComponent
+    SearchComponent,
+    TimeLineComponent
   ],
   entryComponents: [],
   imports: [
