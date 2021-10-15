@@ -48,11 +48,18 @@ export class SearchComponent implements OnInit {
         ])
       )
     });
+
+    this.registerForm.valueChanges.subscribe(data => {
+      if (!this.registerForm.valid) {
+        this.showResearch = false;
+      };
+    });
+
     this.registerForm.controls.cpf.valueChanges.subscribe(data => {
         let cpf = data.replace(/\D/g,"")
-        cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
-        cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
-        cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
         this.registerForm.controls.cpf.setValue(cpf, {emitEvent: false});
     });
   }
