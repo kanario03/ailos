@@ -13,6 +13,14 @@
     min-width: 50%;
 }
 
+.btn-footer-admission {
+    color: white;
+    background: #165C7D;
+    border-color: #165C7D;
+    border-radius: 0;
+    min-width: 50%;
+}
+
 .err {
     color: red;
 }
@@ -26,6 +34,10 @@
 
 .form {
     margin-left: 1em; 
+}
+
+.cards {
+    margin-left: 1em;
 }
 
 .footer {

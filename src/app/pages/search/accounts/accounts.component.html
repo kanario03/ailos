@@ -1,0 +1,17 @@
+<div class="body">
+        <h4 *ngIf="account.type === 'application'">Conta aplicação</h4>
+        <h4 *ngIf="account.type === 'current'">Conta corrente</h4>
+        <p class="subtitle">Cooperativa Viacredi</p>
+    
+        <div class="row">
+            <div class="col-2">
+                <i class="bi bi-credit-card account-icon"></i>
+            </div>
+            <div class="col-10">
+                <label class="label">Número da conta </label>
+                <p class="value">{{account.accountNumber}}</p>
+            </div>
+        </div>
+        
+        <h5 class="link">Duplicar conta</h5>
+</div>

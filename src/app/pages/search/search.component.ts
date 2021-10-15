@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { CpfCnpjValidator } from 'src/app/directives/cpf/cpf.validator';
+import { FirestoreService } from 'src/app/services/firestore/firestore.service';
+
 
 @Component({
   selector: 'app-search',
@@ -9,18 +11,28 @@ import { CpfCnpjValidator } from 'src/app/directives/cpf/cpf.validator';
 })
 export class SearchComponent implements OnInit {
 
-  registerForm: FormGroup;
+  public registerForm: FormGroup;
+  public showResearch = false;
+
+  public user: any;
+  public application: any;
+  public current: any;
+
 
   constructor(
     private formBuilder: FormBuilder,
+    private fsService: FirestoreService
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.prepareForm();
+    this.user = await this.fsService.getUser();
+    this.application = await this.fsService.getApplicationAccount();
+    this.current = await this.fsService.getCurrentAccount();
   }
 
   getCpf() {
-    
+    this.showResearch = true;
   }
 
   prepareForm() {

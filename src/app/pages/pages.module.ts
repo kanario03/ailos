@@ -5,13 +5,17 @@ import { PagesPageRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SearchComponent } from './search/search.component';
 import { TimeLineComponent } from '../shared/time-line/time-line.component';
+import { RegisterStatusComponent } from './search/register-status/register-status.component';
+import { AccountsComponent } from './search/accounts/accounts.component';
 
 
 @NgModule({
   declarations: [
     PagesComponent,
     SearchComponent,
-    TimeLineComponent
+    TimeLineComponent,
+    RegisterStatusComponent,
+    AccountsComponent
   ],
   entryComponents: [],
   imports: [
