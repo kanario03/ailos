@@ -1,0 +1,39 @@
+.button {
+    background: #165C7D;
+    border-color: #165C7D;
+    border-radius: 0;
+    min-width: 100%;
+}
+
+.btn-footer {
+    color: #165C7D;
+    background: white;
+    border-color: #165C7D;
+    border-radius: 0;
+    min-width: 50%;
+}
+
+.err {
+    color: red;
+}
+
+.body {
+    position: relative;
+    min-height: 89vh;
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    margin-left: 1em; 
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 5em;
+    background: white;
+    min-width: 100%;
+    padding: 1em;
+}

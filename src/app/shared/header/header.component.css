@@ -2,6 +2,8 @@
     background: white;
     margin: 0;
     padding: 10px;
+    min-height: 11vh;
+    max-height: 11vh
 }
 
 .title {

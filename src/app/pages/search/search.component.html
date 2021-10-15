@@ -1,9 +1,51 @@
-<div class="container">
-    <app-time-line></app-time-line>
+<div class="container-fluid body">
+  <app-time-line></app-time-line>
 
-    <div class="form">
-      <h2>Informe o CPF do futuro cooperado (a)</h2>
-      <p>Se necessário, você podera duplicar uma conta existente ou pausar e retomar este cadastro futuramente. <br>
-      Digite apenas os números sem pontos outra traços.</p>
+  <div class="form">
+    <h2>Informe o CPF do futuro cooperado (a)</h2>
+    <p>
+      Se necessário, você podera duplicar uma conta existente ou pausar e
+      retomar este cadastro futuramente. <br />
+      Digite apenas os números sem pontos outra traços.
+    </p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="getCpf()">
+      <label for="cpf" class="form-label">CPF</label>
+      <div class="row">
+        <div class="col-3">
+          <div class="mb-3 input">
+            <input
+              class="form-control"
+              id="cpf"
+              aria-describedby="cpf"
+              maxlength="14"
+              formControlName="cpf"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary button" [disabled]="!registerForm.valid">
+            Consultar por CPF
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <div class="err" *ngIf="registerForm.value.cpf && !registerForm.valid">
+            *Cpf Inválido!
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="footer">
+    <div class="row">
+      <div class="col-4">
+        <button class="btn btn-primary btn-footer">Dicas para admissão</button>
+      </div>
     </div>
+  </div>
 </div>
